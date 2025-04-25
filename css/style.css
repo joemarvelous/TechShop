@@ -1,0 +1,244 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f0f2f5;
+    color: #2d3748;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.main-header {
+    background: #2c5282;
+    color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+/* Enhanced Header */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.logo-highlight {
+    color: #3182ce;
+    font-weight: 700;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 6px 12px;
+    transition: all 0.3s ease;
+}
+
+.search-form:focus-within {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    background: none;
+    border: none;
+    padding: 8px;
+    width: 300px;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.search-form:focus-within .search-input {
+    color: #2d3748;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-form:focus-within .search-input::placeholder {
+    color: #718096;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.search-button:hover {
+    transform: scale(1.1);
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-icon {
+    font-size: 1.2rem;
+}
+
+.nav-cart-count {
+    background: #e53e3e;
+    color: #ffffff;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 12px;
+    margin-left: 4px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #3182ce;
+}
+
+/* Footer Styles */
+.main-footer {
+    background: #2d3748;
+    color: #ffffff;
+    padding: 3rem 0 1.5rem;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-description {
+    color: #cbd5e0;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.footer-links nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #3182ce;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #4a5568;
+}
+
+.footer-bottom p {
+    color: #cbd5e0;
+    font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0 1rem;
+    }
+
+    .main-nav {
+        gap: 1rem;
+    }
+
+    .footer-links nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .search-form {
+        display: none;
+    }
+    
+    .nav-link span:not(.nav-cart-count) {
+        display: none;
+    }
+}
